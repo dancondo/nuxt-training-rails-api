@@ -1,9 +1,10 @@
 class V1::PostsController < ApplicationController
   before_action :set_post, only: %i[show update destroy]
-  skit_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @posts = Post.all
+    render json: @posts
   end
 
   def show; end
