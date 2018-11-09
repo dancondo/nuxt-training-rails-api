@@ -1,6 +1,11 @@
 class V1::PostsController < ApplicationController
   before_action :set_post, only: %i[show update destroy]
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[home index show]
+
+  def home
+    @posts = Post.last(3)
+    render json: { posts: @posts }
+  end
 
   def index
     @posts = Post.all
