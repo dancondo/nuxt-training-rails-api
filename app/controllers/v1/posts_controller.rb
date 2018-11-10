@@ -9,10 +9,12 @@ class V1::PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    render json: @posts
+    render json: { posts: @posts }
   end
 
-  def show; end
+  def show
+    render json: { post: @post }
+  end
 
   def create
     @post = Post.new(post_params)

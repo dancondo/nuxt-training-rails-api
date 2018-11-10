@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'devise-jwt', '~> 0.5.8'
+gem 'pundit'
 gem 'dotenv'
 gem 'rack-cors'
 # Use ActiveStorage variant
