@@ -16,8 +16,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'devise-jwt', '~> 0.5.8'
 gem 'pundit'
-gem 'dotenv'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'rack-cors'
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
